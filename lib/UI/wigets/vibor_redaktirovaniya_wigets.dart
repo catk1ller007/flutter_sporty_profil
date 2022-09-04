@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:phoneflutter/UI/pages/contact_page.dart';
 import 'package:phoneflutter/UI/pages/osnova_page.dart';
 
-
 class voiti_red extends StatelessWidget {
   const voiti_red({Key? key}) : super(key: key);
 
@@ -17,15 +16,20 @@ class voiti_red extends StatelessWidget {
       child: Row(children: [
         Column(
           children: [
-            RaisedButton.icon(
-              padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-              color: Colors.white,
+            ElevatedButton.icon(
+              //padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+              //color: Colors.white,
               onPressed: () {
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (BuildContext context) {
                   return osnova_red();
                 }));
               },
+              style: ElevatedButton.styleFrom(
+                padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+                primary: Colors.white,
+                onPrimary: Colors.black,
+              ),
               icon: Text(
                 "Основное                                         ",
                 style: TextStyle(fontSize: 20),
@@ -35,15 +39,18 @@ class voiti_red extends StatelessWidget {
                 size: 30,
               ),
             ),
-            RaisedButton.icon(
-              padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-              color: Colors.white,
+            ElevatedButton.icon(
               onPressed: () {
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (BuildContext context) {
                   return contact_red();
                 }));
               },
+              style: ElevatedButton.styleFrom(
+                padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+                primary: Colors.white,
+                onPrimary: Colors.black,
+              ),
               icon: Text(
                 "Контакты                                         ",
                 style: TextStyle(fontSize: 20),
@@ -53,10 +60,13 @@ class voiti_red extends StatelessWidget {
                 size: 30,
               ),
             ),
-            RaisedButton.icon(
-              padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-              color: Colors.white,
+            ElevatedButton.icon(
               onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+                primary: Colors.white,
+                onPrimary: Colors.black,
+              ),
               icon: Text(
                 "Интересы                                         ",
                 style: TextStyle(fontSize: 20),

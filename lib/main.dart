@@ -119,19 +119,26 @@ class _MyHomePageState extends State<MyHomePage> {
                     Container(
                       padding: EdgeInsets.only(left: 0),
                       alignment: Alignment.center,
-                      child: RaisedButton.icon(
+                      child: ElevatedButton.icon(
                         onPressed: () {
-                          Navigator.of(context).push(
-                              MaterialPageRoute(builder: (BuildContext context) {
-                                return profilredwiget();
-                              }));
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (BuildContext context) {
+                            return profilredwiget();
+                          }));
                         },
-                        color: Colors.grey,
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.grey,
+                          onPrimary: Colors.black,
+                          padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+                        ),
                         icon: Icon(
                           Icons.mode_edit,
                           size: 20,
                         ),
-                        label: Text("Редактировать",style: TextStyle(fontSize: 17),),
+                        label: Text(
+                          "Редактировать",
+                          style: TextStyle(fontSize: 17),
+                        ),
                       ),
                     ),
                   ]),
